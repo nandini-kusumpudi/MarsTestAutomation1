@@ -16,13 +16,13 @@ namespace MarsTestAutomation.StepDefinition
         [BeforeScenario]
         public void Initialization()
         {
-            sellerProfileObj = new ProfilePage();
+            sellerProfileObj = new ProfilePage(driver);
         }
 
         [Given(@"I click on name expand icon")]
         public void GivenIClickOnNameExpandIcon()
         {
-            sellerProfileObj.SelectSellerNameDropDown(driver);
+            sellerProfileObj.SelectSellerNameDropDown();
         }
 
       
@@ -30,14 +30,14 @@ namespace MarsTestAutomation.StepDefinition
         [When(@"I enter '(.*)' '(.*)' and click on Save button")]
         public void WhenIEnterAndClickOnSaveButton(string firstName, string lastName)
         {
-            sellerProfileObj.EditSellerProfile(driver, firstName, lastName);
+            sellerProfileObj.EditSellerProfile(firstName, lastName);
         }
 
 
         [Then(@"Name should be saved successfully")]
         public void ThenNameShouldBeSavedSuccessfully()
         {
-            string updatedSellerName = sellerProfileObj.GetSellerprofileName(driver);
+            string updatedSellerName = sellerProfileObj.GetSellerprofileName();
             Assert.AreEqual("nandini kusumpudi", updatedSellerName);
         }
     }

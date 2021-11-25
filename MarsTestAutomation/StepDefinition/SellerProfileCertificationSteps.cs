@@ -10,53 +10,53 @@ namespace MarsTestAutomation.StepDefinition
     [Binding]
     class SellerProfileCertificationSteps: CommonDriver
     {
-        private ProfilePage CertificationObj;
+        private ProfilePage CertificationPage;
 
         [BeforeScenario]
         public void Initialization()
         {
-            CertificationObj = new ProfilePage();
+            CertificationPage = new ProfilePage(driver);
         }
 
         // Add certification
         [Given(@"I click on Certifications and Add New button")]
         public void GivenIClickOnCertificationsAndAddNewButton()
         {
-            CertificationObj.ClickOnCertificationTab(driver);
-            CertificationObj.ClickOnAddNewCertificationButton(driver);
+            CertificationPage.ClickOnCertificationTab();
+            CertificationPage.ClickOnAddNewCertificationButton();
         }
 
         [When(@"I Enter seller '(.*)' , '(.*)', '(.*)' details and click on Add button")]
         public void WhenIEnterSellerDetailsAndClickOnAddButton(string Certification, string CertificationForm, string Year)
         {
-            CertificationObj.EnterDataInAddCertificationFeilds(driver, Certification, CertificationForm, Year);
+            CertificationPage.EnterDataInAddCertificationFeilds(Certification, CertificationForm, Year);
         }
 
         //edit certification
-        [Given(@"I click on Certifications and Update button")]
-        public void GivenIClickOnCertificationsAndUpdateButton()
+        [Given(@"I click on Certifications tab and Edit icon")]
+        public void GivenIClickOnCertificationsTabAndEditIcon()
         {
-            CertificationObj.ClickOnCertificationTab(driver);
-            CertificationObj.ClickOnEditcertificationIcon(driver);
+            CertificationPage.ClickOnCertificationTab();
+            CertificationPage.ClickOnEditcertificationIcon();
         }
 
         [When(@"I Edited  '(.*)', '(.*)', '(.*)'  details and click on Update button")]
         public void WhenIEditedDetailsAndClickOnUpdateButton(string EditCertification, string EditCertificationForm, string EditYear)
         {
-            CertificationObj.EditDataOnCertificationField(driver, EditCertification, EditCertificationForm, EditYear);
+            CertificationPage.EditDataOnCertificationField(EditCertification, EditCertificationForm, EditYear);
         }
 
         //delete certification
         [Given(@"I selected the Certification tab")]
         public void GivenISelectedTheCertificationTab()
         {
-            CertificationObj.ClickOnCertificationTab(driver);
+            CertificationPage.ClickOnCertificationTab();
         }
 
         [When(@"I click on certification delete icon")]
         public void WhenIClickOnCertificationDeleteIcon()
         {
-            CertificationObj.ClickOnDeleteIconCertificationField(driver);
+            CertificationPage.ClickOnDeleteIconCertificationField();
         }
 
     }

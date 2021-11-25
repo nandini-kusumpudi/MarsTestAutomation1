@@ -28,17 +28,16 @@ namespace MarsTestAutomation.Utilities
             extent.AttachReporter(extentHtmlReporter);
         }
 
-
         [BeforeFeature]
         public static void BeforeFeature(FeatureContext context)
         {
             feature = extent.CreateTest(context.FeatureInfo.Title);
         }
 
-
         [BeforeScenario]
         public static void BeforeScenario(ScenarioContext context)
         {
+            CommonDriver.Initialize();
             scenario = feature.CreateNode(context.ScenarioInfo.Title);
         }
 

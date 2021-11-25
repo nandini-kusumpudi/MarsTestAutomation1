@@ -166,9 +166,6 @@ namespace MarsTestAutomation.SpecFlow
   testRunner.And("I click on Certifications and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 25
-  testRunner.When("I click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 26
   testRunner.Then("a popup should be shown with this message (Please entry certification Name and ce" +
                         "rtification Form and certification Year)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -185,7 +182,7 @@ namespace MarsTestAutomation.SpecFlow
                     "sellerprofiletest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Profile Certification with only Certification Name field", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 29
+#line 28
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -205,16 +202,16 @@ namespace MarsTestAutomation.SpecFlow
             else
             {
                 this.ScenarioStart();
-#line 30
+#line 29
   testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 31
+#line 30
   testRunner.And("I click on Certification and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 32
+#line 31
   testRunner.When("I enter Certification Name field click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 33
+#line 32
   testRunner.Then("a popup should be shown with this message (Please entry certification Name and ce" +
                         "rtification Form and certification Year)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -231,7 +228,7 @@ namespace MarsTestAutomation.SpecFlow
                     "sellerprofiletest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Profile Certification with only Certification Form field", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 36
+#line 35
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -251,16 +248,16 @@ namespace MarsTestAutomation.SpecFlow
             else
             {
                 this.ScenarioStart();
-#line 37
+#line 36
   testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 38
+#line 37
   testRunner.And("I click on Certification and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 39
+#line 38
   testRunner.When("I enter Certification Form field click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 40
+#line 39
   testRunner.Then("a popup should be shown with this message (Please entry certification Name and ce" +
                         "rtification Form and certification Year)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -277,7 +274,7 @@ namespace MarsTestAutomation.SpecFlow
                     "sellerprofiletest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Profile Certification with only Certification Year field", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 43
+#line 42
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -297,16 +294,16 @@ namespace MarsTestAutomation.SpecFlow
             else
             {
                 this.ScenarioStart();
-#line 44
+#line 43
   testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 45
+#line 44
   testRunner.And("I click on Certification and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 46
+#line 45
   testRunner.When("I enter Certification Year field click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 47
+#line 46
   testRunner.Then("a popup should be shown with this message (Please entry certification Name and ce" +
                         "rtification Form and certification Year)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -333,7 +330,7 @@ namespace MarsTestAutomation.SpecFlow
             argumentsOfScenario.Add("EditYear", editYear);
             argumentsOfScenario.Add("Message", message);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Profile Certifications with data", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 51
+#line 50
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -353,16 +350,16 @@ namespace MarsTestAutomation.SpecFlow
             else
             {
                 this.ScenarioStart();
-#line 52
+#line 51
   testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 53
-  testRunner.And("I click on Certifications and Update button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 52
+  testRunner.And("I click on Certifications tab and Edit icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 54
+#line 53
   testRunner.When(string.Format("I Edited  \'{0}\', \'{1}\', \'{2}\'  details and click on Update button", editCertification, editCertificationForm, editYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 55
+#line 54
   testRunner.Then(string.Format("A popup should be shown with \'{0}\'", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -378,7 +375,7 @@ namespace MarsTestAutomation.SpecFlow
                     "sellerprofiletest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Profile Certifications withot any data", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 62
+#line 61
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -398,16 +395,16 @@ namespace MarsTestAutomation.SpecFlow
             else
             {
                 this.ScenarioStart();
-#line 63
+#line 62
   testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 64
-  testRunner.And("I click on Certifications and Update button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 63
+  testRunner.And("I click on Certifications tab and Edit icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 65
+#line 64
   testRunner.When("I click on Update button withot any data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 66
+#line 65
   testRunner.Then("a popup should be shown with this message (Please entry certification Name and ce" +
                         "rtification Form and certification Year)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -424,7 +421,7 @@ namespace MarsTestAutomation.SpecFlow
                     "sellerprofiletest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Profile Certifications withot Update data", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 69
+#line 68
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -444,16 +441,16 @@ namespace MarsTestAutomation.SpecFlow
             else
             {
                 this.ScenarioStart();
-#line 70
+#line 69
   testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 71
-  testRunner.And("I click on Certifications and update button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 70
+  testRunner.And("I click on Certifications tab and Edit icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 72
+#line 71
   testRunner.When("I click on Update button withot Update data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 73
+#line 72
   testRunner.Then("a popup should be shown with this message (This information is already exits)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -476,7 +473,7 @@ namespace MarsTestAutomation.SpecFlow
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Message", message);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Profile Certification delete", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 77
+#line 76
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -496,16 +493,16 @@ namespace MarsTestAutomation.SpecFlow
             else
             {
                 this.ScenarioStart();
-#line 78
+#line 77
   testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 79
+#line 78
   testRunner.And("I selected the Certification tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 80
+#line 79
   testRunner.When("I click on certification delete icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 81
+#line 80
   testRunner.Then(string.Format("A popup should be shown with \'{0}\'", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

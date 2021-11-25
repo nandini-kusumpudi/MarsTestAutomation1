@@ -15,54 +15,53 @@ namespace MarsTestAutomation.StepDefinition
         [BeforeScenario]
         public void Initialization()
         {
-            descriptionObj = new ProfilePage();
+            descriptionObj = new ProfilePage(driver);
         }
 
         [Given(@"I logged into Trade Skills portal successfully")]
         public void GivenILoggedIntoTradeSkillsPortalSuccessfully()
         {
-            driver = new ChromeDriver();
 
-            LoginPage loginObj = new LoginPage();
-            loginObj.LoginAction(driver);
+            LoginPage loginObj = new LoginPage(driver);
+            loginObj.LoginAction();
         }
 
         [Given(@"I click on pen icon")]
         public void GivenIClickOnPenIcon()
         {
-            descriptionObj.ClickOnDescriptionPenIcon(driver);
+            descriptionObj.ClickOnDescriptionPenIcon();
         }
 
         [When(@"I Add '(.*)' and click Save button")]
         public void WhenIAddAndClickSaveButton(string description)
         {
-            descriptionObj.AddDescription(driver, description);
+            descriptionObj.AddDescription(description);
         }
 
         [Then(@"'(.*)' should be saved successfully")]
         public void ThenShouldBeSavedSuccessfully(string description)
         {
-            string newDescription = descriptionObj.GetDescription(driver);
+            string newDescription = descriptionObj.GetDescription();
             Assert.AreEqual(description, newDescription);
         }
 
         [When(@"I click Save button without data")]
         public void WhenIClickSaveButtonWithoutData()
         {
-            descriptionObj.AddDescription(driver, "");
+            descriptionObj.AddDescription("");
         }
 
         [Then(@"A popup should be shown with '(.*)'")]
         public void ThenAPopupShouldBeShownWith(string message)
         {
-            string popUpMessage = descriptionObj.GetPopUpMessage(driver);
+            string popUpMessage = descriptionObj.GetPopUpMessage();
             Assert.AreEqual(popUpMessage, message);
         }
 
         [When(@"I edit '(.*)' and click Save button")]
         public void WhenIEditAndClickSaveButton(string description)
         {
-            descriptionObj.AddDescription(driver, description);
+            descriptionObj.AddDescription(description);
         }
 
     }

@@ -22,7 +22,6 @@ The people looking my profile can see what Certification i done.
 	Scenario: Add Profile Certifications withot data
 		Given I logged into Trade Skills portal successfully
 		And I click on Certifications and Add New button
-		When I click on Add button
 		Then a popup should be shown with this message (Please entry certification Name and certification Form and certification Year)
 		
 	@sellerprofiletest
@@ -50,7 +49,7 @@ The people looking my profile can see what Certification i done.
 	@sellerprofiletest
 	Scenario: Edit Profile Certifications with data
 		Given I logged into Trade Skills portal successfully
-		And I click on Certifications and Update button
+		And I click on Certifications tab and Edit icon 
 		When I Edited  '<EditCertification>', '<EditCertificationForm>', '<EditYear>'  details and click on Update button
 		Then A popup should be shown with '<Message>' 
 		
@@ -61,14 +60,14 @@ The people looking my profile can see what Certification i done.
 	@sellerprofiletest
 	Scenario: Edit Profile Certifications withot any data
 		Given I logged into Trade Skills portal successfully
-		And I click on Certifications and Update button
+		And I click on Certifications tab and Edit icon 
 		When I click on Update button withot any data
 		Then a popup should be shown with this message (Please entry certification Name and certification Form and certification Year)
 		
 	@sellerprofiletest
 	Scenario: Edit Profile Certifications withot Update data
 		Given I logged into Trade Skills portal successfully
-		And I click on Certifications and update button
+		And I click on Certifications tab and Edit icon 
 		When I click on Update button withot Update data
 		Then a popup should be shown with this message (This information is already exits)
 		

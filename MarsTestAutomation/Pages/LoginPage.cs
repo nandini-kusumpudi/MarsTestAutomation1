@@ -9,13 +9,19 @@ namespace MarsTestAutomation.Pages
     {
         private string userName = "nandini.kusumpudi49@gmail.com";
         private string password = "test@123";
-        public void LoginAction(IWebDriver driver)  
+        private IWebElement SignInButton;
+        private IWebDriver driver;
+        public LoginPage(IWebDriver driver)
         {
-            driver.Navigate().GoToUrl("http://localhost:5000/");
+            this.driver = driver;
+        }
+        public void LoginAction()  
+        {
+            DriverUtilis.NavigateUrl(driver, "http://localhost:5000/");
             driver.Manage().Window.Maximize();
 
-            IWebElement signInButton = driver.FindElement(By.XPath("//*[@id='home']/div/div/div[1]/div/a"));
-            signInButton.Click();
+            SignInButton = driver.FindElement(By.XPath("//*[@id='home']/div/div/div[1]/div/a"));
+            SignInButton.Click();
             
             // indetify the username textbox enter valid username
             IWebElement emailAddressTextbox = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[1]/input"));

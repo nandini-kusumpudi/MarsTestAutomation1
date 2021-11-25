@@ -15,38 +15,38 @@ namespace MarsTestAutomation.StepDefinition
         [BeforeScenario]
         public void Initialization()
         {
-            languageObj = new ProfilePage();
+            languageObj = new ProfilePage(driver);
         }
 
         [Given(@"I click on language Add New Button")]
         public void GivenIClickOnLanguageAddNewButton()
         {
-            languageObj.LanguageAddNewButton(driver);
+            languageObj.LanguageAddNewButton();
         }
 
 
         [When(@"I Enter the data in '(.*)' and '(.*)' and click on Add button")]
         public void WhenIEnterTheDataInAndAndClickOnAddButton(string addLanguage, string languagelevel)
         {
-            languageObj.EnterDataLanguageField(driver, addLanguage, languagelevel);
+            languageObj.EnterDataLanguageField(addLanguage, languagelevel);
         }
 
         [Given(@"I click on language pen icon")]
         public void GivenIClickOnLanguagePenIcon()
         {
-            languageObj.EditLanguageButton(driver);
+            languageObj.EditLanguageButton();
         }
 
         [When(@"I Edited the data in '(.*)' and '(.*)'  and click on update button")]
         public void WhenIEditedTheDataInAndAndClickOnUpdateButton(string editLanguage, string editLanguageLevel)
         {
-            languageObj.EditLanguageData(driver, editLanguage, editLanguageLevel);
+            languageObj.EditLanguageData(editLanguage, editLanguageLevel);
         }
 
         [Given(@"I click language delet icon")]
         public void GivenIClickLanguageDeletIcon()
         {
-            languageObj.DeleteLanguage(driver);
+            languageObj.DeleteLanguage();
         }
 
     }

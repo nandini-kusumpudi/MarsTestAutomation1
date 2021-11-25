@@ -107,10 +107,10 @@ namespace MarsTestAutomation.SpecFlow
         testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 11
-        testRunner.And("I click on Education and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.When("I click on Education and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 12
-        testRunner.When("I Enter seller Education details and click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.And("I Enter seller Education details and click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 13
         testRunner.Then("Education details should be Added and saved successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -152,10 +152,10 @@ namespace MarsTestAutomation.SpecFlow
         testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 18
-        testRunner.And("I click on Education and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.When("I click on Education and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 19
-        testRunner.When("I click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.And("I click on Add button with out any data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
         testRunner.Then("a popup should be shown with this message (Please entry all the fields)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -197,10 +197,10 @@ namespace MarsTestAutomation.SpecFlow
         testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 25
-        testRunner.And("I click on Education and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.When("I click on Education and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 26
-        testRunner.When("I enter college/University Name field click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.And("I enter college/University Name field click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 27
         testRunner.Then("a popup should be shown with this message (Please entry all the fields)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -242,10 +242,10 @@ namespace MarsTestAutomation.SpecFlow
         testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 32
-        testRunner.And("I click on Education and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.When("I click on Education and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 33
-        testRunner.When("I enter country of college/University field click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.And("I enter country of college/University field click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 34
         testRunner.Then("a popup should be shown with this message (Please entry all the fields)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -287,10 +287,10 @@ namespace MarsTestAutomation.SpecFlow
         testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 39
-        testRunner.And("I click on Education and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.When("I click on Education and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 40
-        testRunner.When("I Selected title field click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.And("I Selected title field click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 41
         testRunner.Then("a popup should be shown with this message (Please entry all the fields)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -332,10 +332,10 @@ namespace MarsTestAutomation.SpecFlow
         testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 46
-        testRunner.And("I click on Education and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.When("I click on Education and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 47
-        testRunner.When("I enter degree field click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.And("I enter degree field click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 48
         testRunner.Then("a popup should be shown with this message (Please entry all the fields)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -377,10 +377,10 @@ namespace MarsTestAutomation.SpecFlow
         testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 53
-        testRunner.And("I click on Education and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.When("I click on Education and Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 54
-        testRunner.When("I enter year of Graduation field click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.And("I enter year of Graduation field click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 55
         testRunner.Then("a popup should be shown with this message (Please entry all the fields)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -422,10 +422,10 @@ namespace MarsTestAutomation.SpecFlow
         testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 63
-        testRunner.And("I click on Education and pen Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.When("I click on Education and pen Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 64
-        testRunner.When("I Edited seller Education details and click on Update button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.And("I Edited seller Education details and click on Update button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 65
         testRunner.Then("Education details should be Added and saved successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -467,10 +467,10 @@ namespace MarsTestAutomation.SpecFlow
         testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 70
-        testRunner.And("I click on Education and pen Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.When("I click on Education and pen Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 71
-        testRunner.When("I click on update button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.And("I click on update button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 72
         testRunner.Then("a popup should be shown with this message (Please entry all the fields)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -512,10 +512,10 @@ namespace MarsTestAutomation.SpecFlow
         testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 77
-        testRunner.And("I click on Education and pen Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.When("I click on Education and pen Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 78
-        testRunner.When("I click on update button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.And("I click on update button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 79
         testRunner.Then("a popup should be shown with this message (This information is already exist)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -557,10 +557,10 @@ namespace MarsTestAutomation.SpecFlow
         testRunner.Given("I logged into Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 86
-        testRunner.And("I selected the Education", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.When("I selected the Education", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 87
-        testRunner.When("I click on delete icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.And("I click on delete icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 88
         testRunner.Then("Education should be Deleted successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

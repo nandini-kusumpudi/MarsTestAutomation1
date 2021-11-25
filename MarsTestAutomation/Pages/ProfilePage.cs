@@ -10,15 +10,20 @@ namespace MarsTestAutomation.Pages
     {
         private IWebElement descriptionField;
         private IWebElement skillNameField;
-        private IWebElement skillLevelDropdownField;
         private IWebElement skillLevelDropdownOption;
         private IWebElement sellerProfileField;
         private IWebElement languageField;
         private IWebElement languageLevelDropdownField;
         private IWebElement certificationField;
         private IWebElement certificationYearDropdownField;
+        private IWebDriver driver;
 
-        public void ClickOnDescriptionPenIcon(IWebDriver driver)
+        public ProfilePage(IWebDriver driver)
+        {
+            this.driver = driver;
+        }
+
+        public void ClickOnDescriptionPenIcon()
         {
             Wait.WaitForElementToBeClickable(driver, "Xpath",
                 "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/div/h3/span/i",
@@ -29,12 +34,7 @@ namespace MarsTestAutomation.Pages
             descriptionPenIcon.Click();
         }
 
-        internal void LanguageAddNewButton()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void AddDescription(IWebDriver driver, string description)
+        public void AddDescription(string description)
         {
             descriptionField = driver.FindElement(By.XPath(
                 "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/div[1]/textarea"));
@@ -46,14 +46,14 @@ namespace MarsTestAutomation.Pages
             saveButton.Click();
         }
 
-        public String GetDescription(IWebDriver driver)
+        public String GetDescription()
         {
             descriptionField = driver.FindElement(By.XPath(
                 "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/div[1]/textarea"));
             return descriptionField.Text;
         }
 
-        public String GetPopUpMessage(IWebDriver driver)
+        public String GetPopUpMessage()
         {
 
             Wait.WaitForElementToBeClickable(driver, "CssSelector", "div[class='ns-box-inner']", 15);
@@ -64,7 +64,7 @@ namespace MarsTestAutomation.Pages
         // skill feild
 
         //Add skill
-        public void ClickOnSkillsTab(IWebDriver driver)
+        public void ClickOnSkillsTab()
         {
             Wait.WaitForElementToBeClickable(driver, "Xpath",
                 "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[2]",
@@ -75,14 +75,14 @@ namespace MarsTestAutomation.Pages
             skill.Click();
         }
 
-        public void cliclOnAddNewButton(IWebDriver driver)
+        public void cliclOnAddNewButton()
         {
             IWebElement addButton = driver.FindElement(By.XPath(
                 "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/thead/tr/th[3]/div"));
             addButton.Click();
         }
 
-        public void AddSkilldata(IWebDriver driver, string skillName, string skillLevel)
+        public void AddSkilldata(string skillName, string skillLevel)
         {
             skillNameField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[1]/input"));
             skillNameField.SendKeys(skillName);
@@ -101,7 +101,7 @@ namespace MarsTestAutomation.Pages
             Addbutton.Click();
         }
 
-        public String GetSkillsAddPopUpMessage(IWebDriver driver)
+        public String GetSkillsAddPopUpMessage()
         {
             Wait.WaitForElementToBeClickable(driver, "CssSelector", "div[class='ns-box-inner']", 15);
             IWebElement popup = driver.FindElement(By.CssSelector("div[class='ns-box-inner']"));
@@ -109,16 +109,16 @@ namespace MarsTestAutomation.Pages
         }
 
         // edit skill
-        public void ClickEditPenIcon(IWebDriver driver)
+        public void ClickEditPenIcon()
         {
-            ClickOnSkillsTab(driver);
+            ClickOnSkillsTab();
             Thread.Sleep(5000); // WaitForElementToBeClickable method is not working here so used sleep method
 
             IWebElement editPenIcon = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td[3]/span[1]/i"));
             editPenIcon.Click();
         }
 
-        public void UpdateSkillsData(IWebDriver driver, string skillName, string skillLevel)
+        public void UpdateSkillsData(string skillName, string skillLevel)
         {
             skillNameField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td/div/div[1]/input"));
             skillNameField.Clear();
@@ -139,7 +139,7 @@ namespace MarsTestAutomation.Pages
 
         // delete skill
 
-        public void DeleteSkill(IWebDriver driver)
+        public void DeleteSkill()
         {
             Wait.WaitForElementToBeClickable(driver, "Xpath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td[3]/span[2]/i",
                    15);
@@ -148,7 +148,7 @@ namespace MarsTestAutomation.Pages
         }
 
         // seller profile
-        public void SelectSellerNameDropDown(IWebDriver driver)
+        public void SelectSellerNameDropDown()
         {
             Wait.WaitForElementToBeClickable(driver, "Xpath",
                 "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i",
@@ -159,7 +159,7 @@ namespace MarsTestAutomation.Pages
             sellerDropdown.Click();
         }
 
-        public void EditSellerProfile(IWebDriver driver, string firstName, string lastName)
+        public void EditSellerProfile(string firstName, string lastName)
         {
             Wait.WaitForElementToBeClickable(driver, "CssSelector", "input[name='firstName']", 15);
 
@@ -177,7 +177,7 @@ namespace MarsTestAutomation.Pages
             savaButton.Click();
         }
 
-        public String GetSellerprofileName(IWebDriver driver)
+        public String GetSellerprofileName()
         {
             sellerProfileField = driver.FindElement(By.XPath(
                 "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]"));
@@ -186,7 +186,7 @@ namespace MarsTestAutomation.Pages
 
         //Language field
         //Add language
-        public void LanguageAddNewButton(IWebDriver driver)
+        public void LanguageAddNewButton()
         {
             Wait.WaitForElementToBeClickable(driver, "Xpath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div",
                    15);
@@ -195,7 +195,7 @@ namespace MarsTestAutomation.Pages
             languageField.Click();
         }
 
-        public void EnterDataLanguageField(IWebDriver driver, string addLanguage, string languagelevel)
+        public void EnterDataLanguageField(string addLanguage, string languagelevel)
         {
             Thread.Sleep(5000);
             languageField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[1]/input"));
@@ -215,14 +215,14 @@ namespace MarsTestAutomation.Pages
         }
 
         // edit language
-        public void EditLanguageButton(IWebDriver driver)
+        public void EditLanguageButton()
         {
             Thread.Sleep(5000); // WaitForElementToBeClickable method is not working here so used sleep method
             IWebElement editButton = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[3]/span[1]/i"));
             editButton.Click();
         }
 
-        public void EditLanguageData(IWebDriver driver, string editLanguage, string editLanguageLevel)
+        public void EditLanguageData(string editLanguage, string editLanguageLevel)
         {
             languageField = driver.FindElement(By.XPath(" //*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td/div/div[1]/input"));
             languageField.Clear();
@@ -242,7 +242,7 @@ namespace MarsTestAutomation.Pages
         }
 
         // delet language
-        public void DeleteLanguage(IWebDriver driver)
+        public void DeleteLanguage()
         {
             Wait.WaitForElementToBeClickable(driver, "Xpath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[3]/span[2]/i",
                    15);
@@ -252,7 +252,7 @@ namespace MarsTestAutomation.Pages
 
         // certification
         // certification tab
-        public void ClickOnCertificationTab(IWebDriver driver)
+        public void ClickOnCertificationTab()
         {
             Wait.WaitForElementToBeClickable(driver, "Xpath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]",
                    15);
@@ -262,13 +262,13 @@ namespace MarsTestAutomation.Pages
         }
 
         //add certification
-        public void ClickOnAddNewCertificationButton(IWebDriver driver)
+        public void ClickOnAddNewCertificationButton()
         {
             IWebElement addNewButton = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div"));
             addNewButton.Click();
         }
 
-        public void EnterDataInAddCertificationFeilds(IWebDriver driver, string certification, string certificationForm, string Year)
+        public void EnterDataInAddCertificationFeilds(string certification, string certificationForm, string Year)
         {
             //certificate or reward field
             certificationField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[1]/div/input"));
@@ -293,14 +293,14 @@ namespace MarsTestAutomation.Pages
         }
 
         //Edit certification
-        public void ClickOnEditcertificationIcon(IWebDriver driver)
+        public void ClickOnEditcertificationIcon()
         {
             Thread.Sleep(5000);
             certificationField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[1]/tr/td[4]/span[1]/i"));
             certificationField.Click();
         }
 
-        public void EditDataOnCertificationField(IWebDriver driver, string EditCertification, string EditCertificationForm, string EditYear)
+        public void EditDataOnCertificationField(string EditCertification, string EditCertificationForm, string EditYear)
         {
             //certificate or reward field
             certificationField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[1]/tr/td/div/div/div[1]/input"));
@@ -327,7 +327,7 @@ namespace MarsTestAutomation.Pages
         }
 
         //delete certification
-        public void ClickOnDeleteIconCertificationField(IWebDriver driver)
+        public void ClickOnDeleteIconCertificationField()
         {
             Wait.WaitForElementToBeClickable(driver, "Xpath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[1]/tr/td[4]/span[2]/i",
                   15);

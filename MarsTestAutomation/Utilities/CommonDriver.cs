@@ -11,7 +11,7 @@ namespace MarsTestAutomation.Utilities
     {
         public static IWebDriver driver;
 
-        public void LoginActions()
+        public static void Initialize()
         {
             // open chrome browser
             driver = new ChromeDriver();
