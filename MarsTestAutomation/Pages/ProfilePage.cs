@@ -8,14 +8,16 @@ namespace MarsTestAutomation.Pages
 {
     public class ProfilePage
     {
-        private IWebElement descriptionField;
-        private IWebElement skillNameField;
-        private IWebElement skillLevelDropdownOption;
-        private IWebElement sellerProfileField;
-        private IWebElement languageField;
-        private IWebElement languageLevelDropdownField;
-        private IWebElement certificationField;
-        private IWebElement certificationYearDropdownField;
+        private IWebElement descriptionField => driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/div[1]/textarea"));
+        private IWebElement addSkillNameField => driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[1]/input"));
+        private IWebElement addSkillLevelDropdownOption => driver.FindElement(By.XPath( "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[2]/select"));
+        private IWebElement editSkillNameField => driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td/div/div[1]/input"));
+        private IWebElement editSkillLevelDropdownOption => driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td/div/div[2]/select"));
+        private IWebElement sellerProfileField => driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]"));
+        private IWebElement addLanguageField => driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[1]/input"));
+        private IWebElement addLanguageLevelDropdownField => driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select"));
+        private IWebElement editLanguageField  => driver.FindElement(By.XPath(" //*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td/div/div[1]/input"));
+        private IWebElement editLanguageLevelDropdownField => driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td/div/div[2]/select"));
         private IWebDriver driver;
 
         public ProfilePage(IWebDriver driver)
@@ -36,8 +38,6 @@ namespace MarsTestAutomation.Pages
 
         public void AddDescription(string description)
         {
-            descriptionField = driver.FindElement(By.XPath(
-                "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/div[1]/textarea"));
             descriptionField.Clear();
             descriptionField.SendKeys(description);
 
@@ -48,14 +48,11 @@ namespace MarsTestAutomation.Pages
 
         public String GetDescription()
         {
-            descriptionField = driver.FindElement(By.XPath(
-                "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/div[1]/textarea"));
             return descriptionField.Text;
         }
 
         public String GetPopUpMessage()
         {
-
             Wait.WaitForElementToBeClickable(driver, "CssSelector", "div[class='ns-box-inner']", 15);
             IWebElement popup = driver.FindElement(By.CssSelector("div[class='ns-box-inner']"));
             return popup.Text;
@@ -84,15 +81,11 @@ namespace MarsTestAutomation.Pages
 
         public void AddSkilldata(string skillName, string skillLevel)
         {
-            skillNameField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[1]/input"));
-            skillNameField.SendKeys(skillName);
-
-            skillLevelDropdownOption = driver.FindElement(By.XPath(
-                "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[2]/select"));
-            skillLevelDropdownOption.Click();
+            addSkillNameField.SendKeys(skillName); 
+            addSkillLevelDropdownOption.Click();
 
             //create select element object 
-            var selectElement = new SelectElement(skillLevelDropdownOption);
+            var selectElement = new SelectElement(addSkillLevelDropdownOption);
 
             // select by text
             selectElement.SelectByText(skillLevel);
@@ -120,15 +113,11 @@ namespace MarsTestAutomation.Pages
 
         public void UpdateSkillsData(string skillName, string skillLevel)
         {
-            skillNameField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td/div/div[1]/input"));
-            skillNameField.Clear();
-            skillNameField.SendKeys(skillName);
-
-            skillLevelDropdownOption = driver.FindElement(By.XPath(
-                  "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td/div/div[2]/select"));
+            editSkillNameField.Clear();
+            editSkillNameField.SendKeys(skillName);
 
             //create select element object 
-            var selectElement = new SelectElement(skillLevelDropdownOption);
+            var selectElement = new SelectElement(editSkillLevelDropdownOption);
 
             // select by text
             selectElement.SelectByText(skillLevel);
@@ -179,8 +168,6 @@ namespace MarsTestAutomation.Pages
 
         public String GetSellerprofileName()
         {
-            sellerProfileField = driver.FindElement(By.XPath(
-                "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]"));
             return sellerProfileField.Text;
         }
 
@@ -191,21 +178,17 @@ namespace MarsTestAutomation.Pages
             Wait.WaitForElementToBeClickable(driver, "Xpath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div",
                    15);
 
-            languageField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div"));
-            languageField.Click();
+            IWebElement addNewButton = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div"));
+            addNewButton.Click();
         }
 
         public void EnterDataLanguageField(string addLanguage, string languagelevel)
         {
             Thread.Sleep(5000);
-            languageField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[1]/input"));
-            languageField.SendKeys(addLanguage);
-
-            languageLevelDropdownField = driver.FindElement(By.XPath(
-                "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select"));
+            addLanguageField.SendKeys(addLanguage);
 
             //create select element object 
-            var selectElement = new SelectElement(languageLevelDropdownField);
+            var selectElement = new SelectElement(addLanguageLevelDropdownField);
 
             // select by text
             selectElement.SelectByText(languagelevel);
@@ -224,15 +207,11 @@ namespace MarsTestAutomation.Pages
 
         public void EditLanguageData(string editLanguage, string editLanguageLevel)
         {
-            languageField = driver.FindElement(By.XPath(" //*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td/div/div[1]/input"));
-            languageField.Clear();
-            languageField.SendKeys(editLanguage);
-
-            languageLevelDropdownField = driver.FindElement(By.XPath(
-            "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td/div/div[2]/select"));
+            editLanguageField.Clear();
+            editLanguageField.SendKeys(editLanguage);
 
             //create select element object 
-            var selectElement = new SelectElement(languageLevelDropdownField);
+            var selectElement = new SelectElement(editLanguageLevelDropdownField);
 
             // select by text
             selectElement.SelectByText(editLanguageLevel);
@@ -246,8 +225,8 @@ namespace MarsTestAutomation.Pages
         {
             Wait.WaitForElementToBeClickable(driver, "Xpath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[3]/span[2]/i",
                    15);
-            languageField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[3]/span[2]/i"));
-            languageField.Click();
+            IWebElement deleteLanguage = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[3]/span[2]/i"));
+            deleteLanguage.Click();
         }
 
         // certification
@@ -257,8 +236,8 @@ namespace MarsTestAutomation.Pages
             Wait.WaitForElementToBeClickable(driver, "Xpath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]",
                    15);
             //click certification feild
-            certificationField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
-            certificationField.Click();
+            IWebElement certificationTab = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
+            certificationTab.Click();
         }
 
         //add certification
@@ -271,15 +250,15 @@ namespace MarsTestAutomation.Pages
         public void EnterDataInAddCertificationFeilds(string certification, string certificationForm, string Year)
         {
             //certificate or reward field
-            certificationField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[1]/div/input"));
-            certificationField.SendKeys(certification);
+           IWebElement certificationTestField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[1]/div/input"));
+            certificationTestField.SendKeys(certification);
 
             //certificate form feild
-            certificationField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[2]/div[1]/input"));
-            certificationField.SendKeys(certificationForm);
+          IWebElement  certificationFormField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[2]/div[1]/input"));
+            certificationFormField.SendKeys(certificationForm);
             //certificate year
 
-            certificationYearDropdownField = driver.FindElement(By.XPath(
+           IWebElement certificationYearDropdownField = driver.FindElement(By.XPath(
             "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[2]/div[2]/select"));
 
             //create select element object 
@@ -296,28 +275,28 @@ namespace MarsTestAutomation.Pages
         public void ClickOnEditcertificationIcon()
         {
             Thread.Sleep(5000);
-            certificationField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[1]/tr/td[4]/span[1]/i"));
-            certificationField.Click();
+           IWebElement editCertificationField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[1]/tr/td[4]/span[1]/i"));
+            editCertificationField.Click();
         }
 
         public void EditDataOnCertificationField(string EditCertification, string EditCertificationForm, string EditYear)
         {
             //certificate or reward field
-            certificationField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[1]/tr/td/div/div/div[1]/input"));
-            certificationField.Clear();
-            certificationField.SendKeys(EditCertification);
+           IWebElement editCertificationTestField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[1]/tr/td/div/div/div[1]/input"));
+            editCertificationTestField.Clear();
+            editCertificationTestField.SendKeys(EditCertification);
 
             //certificate form feild
-            certificationField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[1]/tr/td/div/div/div[2]/input"));
-            certificationField.Clear();
-            certificationField.SendKeys(EditCertificationForm);
+           IWebElement editCertificationFormField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[1]/tr/td/div/div/div[2]/input"));
+            editCertificationFormField.Clear();
+            editCertificationFormField.SendKeys(EditCertificationForm);
             //certificate year
 
-            certificationYearDropdownField = driver.FindElement(By.XPath(
+          IWebElement  editCertificationYearDropdownField = driver.FindElement(By.XPath(
             "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[1]/tr/td/div/div/div[3]/select"));
 
             //create select element object 
-            var selectElement = new SelectElement(certificationYearDropdownField);
+            var selectElement = new SelectElement(editCertificationYearDropdownField);
 
             // select by text
             selectElement.SelectByText(EditYear);
@@ -332,8 +311,8 @@ namespace MarsTestAutomation.Pages
             Wait.WaitForElementToBeClickable(driver, "Xpath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[1]/tr/td[4]/span[2]/i",
                   15);
 
-            certificationField = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[1]/tr/td[4]/span[2]/i"));
-            certificationField.Click();
+           IWebElement deletCertification = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[1]/tr/td[4]/span[2]/i"));
+            deletCertification.Click();
         }
     }
 }
