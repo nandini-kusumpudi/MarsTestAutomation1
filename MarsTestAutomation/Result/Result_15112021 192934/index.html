@@ -1,0 +1,1476 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Extent Framework</title>
+  <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/cd00a5e/spark/css/style.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style> </style>
+</head>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+
+
+<body class="test-view  standard">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+            <div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">Extent Framework</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">11/15/2021 7:29:34 PM</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+            <div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="side-nav-controls">
+    <ul>
+      <li>
+        <a href="#" class="lightsout" style="color:#8a8a8a;">
+          <i class="fa fa-desktop"></i>"</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+            <div class="page-container">
+                <div class="main-content">
+                    <div class="test-wrapper row">
+                        <div class="test-list">
+                            <div class="test-list-tools">
+                                <ul class="tools pull-left">
+                                    <li>
+                                        <a href="">
+                                            <span class="font-size-14">Tests</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                                <ul class="tools text-right">
+									<li class="user-profile dropdown dropdown-animated scale-left">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<i class="fa fa-exclamation-circle"></i>
+										</a>
+										<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>																																																																		<div class="dropdown-divider"></div>
+											<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+										</ul>
+									</li>
+																		                                </ul>
+                            </div>
+                            <div class="test-list-wrapper scrollable">
+                                <ul class="test-list-item">
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">SellerProfile_Certifications</p> 
+													<p class="duration text-sm">0h:0m:36s+826ms</p> 
+													<span class="datetime">19:29:34 PM</span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">SellerProfile_Certifications</h5>
+															<span class='badge badge-success'>11/15/2021 7:29:34 PM</span>
+															<span class='badge badge-danger'>11/15/2021 7:30:10 PM</span>
+															<span class='badge badge-default'>0h:0m:36s+826ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="mt-4">
+	
+	<div class="accordion">
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Add Profile Certifications with data</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:29:38</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:29:40</td>
+				<td>
+I click on Certifications and Add New button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:29:41</td>
+				<td>
+I Enter seller 'Istqb' , 'Fundation level', '2017' details and click on Add button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:29:41</td>
+				<td>
+A popup should be shown with 'Istqb has been added to your certification'									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:29:41</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Add Profile Certifications with data_15-29-2021_2941.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Add Profile Certifications with data_15-29-2021_2941.jpeg</span>
+												<span class="file-size"> 70678Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Add Profile Certifications with data</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:29:46</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:29:48</td>
+				<td>
+I click on Certifications and Add New button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:29:48</td>
+				<td>
+I Enter seller 'English' , 'intership level', '2015' details and click on Add button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:29:49</td>
+				<td>
+A popup should be shown with 'English has been added to your certification'									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:29:49</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Add Profile Certifications with data_15-29-2021_2949.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Add Profile Certifications with data_15-29-2021_2949.jpeg</span>
+												<span class="file-size"> 73473Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Edit Profile Certifications with data</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:29:53</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:01</td>
+				<td>
+I click on Certifications and Update button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:01</td>
+				<td>
+I Edited  'Testing', 'intership level', '2016'  details and click on Update button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:03</td>
+				<td>
+A popup should be shown with 'Testing has been updated to your certification'									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:30:03</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Edit Profile Certifications with data_15-30-2021_3003.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Edit Profile Certifications with data_15-30-2021_3003.jpeg</span>
+												<span class="file-size"> 77705Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Profile Certification delete</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:07</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:09</td>
+				<td>
+I selected the Certification tab									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:10</td>
+				<td>
+I click on certification delete icon									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:10</td>
+				<td>
+A popup should be shown with 'Testing has been deleted from your certification'									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:30:10</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Profile Certification delete_15-30-2021_3010.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Profile Certification delete_15-30-2021_3010.jpeg</span>
+												<span class="file-size"> 71954Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">SellerProfile_Description</p> 
+													<p class="duration text-sm">0h:0m:35s+662ms</p> 
+													<span class="datetime">19:30:16 PM</span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">SellerProfile_Description</h5>
+															<span class='badge badge-success'>11/15/2021 7:30:16 PM</span>
+															<span class='badge badge-danger'>11/15/2021 7:30:52 PM</span>
+															<span class='badge badge-default'>0h:0m:35s+662ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="mt-4">
+	
+	<div class="accordion">
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Add Profile Description with data</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:20</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:25</td>
+				<td>
+I click on pen icon									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:26</td>
+				<td>
+I Add 'hello, I added description' and click Save button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:27</td>
+				<td>
+A popup should be shown with 'Description has been saved successfully'									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:30:27</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Add Profile Description with data_15-30-2021_3027.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Add Profile Description with data_15-30-2021_3027.jpeg</span>
+												<span class="file-size"> 70291Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Add Profile Description without data</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:33</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:38</td>
+				<td>
+I click on pen icon									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:38</td>
+				<td>
+I click Save button without data									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:39</td>
+				<td>
+A popup should be shown with 'Please, a description is required'									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:30:39</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Add Profile Description without data_15-30-2021_3039.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Add Profile Description without data_15-30-2021_3039.jpeg</span>
+												<span class="file-size"> 70675Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Edit Profile Description</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:45</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:50</td>
+				<td>
+I click on pen icon									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:50</td>
+				<td>
+I edit 'hello, I edited description' and click Save button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:51</td>
+				<td>
+A popup should be shown with 'Description has been saved successfully'									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:30:52</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Edit Profile Description_15-30-2021_3052.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Edit Profile Description_15-30-2021_3052.jpeg</span>
+												<span class="file-size"> 70291Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">SellerProfile_Languages</p> 
+													<p class="duration text-sm">0h:0m:58s+401ms</p> 
+													<span class="datetime">19:30:54 PM</span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">SellerProfile_Languages</h5>
+															<span class='badge badge-success'>11/15/2021 7:30:54 PM</span>
+															<span class='badge badge-danger'>11/15/2021 7:31:52 PM</span>
+															<span class='badge badge-default'>0h:0m:58s+401ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="mt-4">
+	
+	<div class="accordion">
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Add Profile Languages with data</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:30:57</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:00</td>
+				<td>
+I click on language Add New Button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:05</td>
+				<td>
+I Enter the data in 'English' and 'Fluent' and click on Add button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:06</td>
+				<td>
+A popup should be shown with 'English has been added to your languages'									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:31:06</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Add Profile Languages with data_15-31-2021_3106.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Add Profile Languages with data_15-31-2021_3106.jpeg</span>
+												<span class="file-size"> 72314Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Add Profile Languages with data</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:10</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:13</td>
+				<td>
+I click on language Add New Button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:18</td>
+				<td>
+I Enter the data in 'Spanish' and 'Basic' and click on Add button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:19</td>
+				<td>
+A popup should be shown with 'Spanish has been added to your languages'									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:31:19</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Add Profile Languages with data_15-31-2021_3119.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Add Profile Languages with data_15-31-2021_3119.jpeg</span>
+												<span class="file-size"> 74396Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Add Profile Languages with data</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:23</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:25</td>
+				<td>
+I click on language Add New Button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:31</td>
+				<td>
+I Enter the data in 'Irish' and 'Basic' and click on Add button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:31</td>
+				<td>
+A popup should be shown with 'Irish has been added to your languages'									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:31:31</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Add Profile Languages with data_15-31-2021_3131.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Add Profile Languages with data_15-31-2021_3131.jpeg</span>
+												<span class="file-size"> 74845Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Edit Profile Languages with data</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:36</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:41</td>
+				<td>
+I click on language pen icon									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:42</td>
+				<td>
+I Edited the data in 'Hindi' and 'Basic'  and click on update button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:43</td>
+				<td>
+A popup should be shown with 'Hindi has been updated to your languages'									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:31:43</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Edit Profile Languages with data_15-31-2021_3143.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Edit Profile Languages with data_15-31-2021_3143.jpeg</span>
+												<span class="file-size"> 75402Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Profile Languages delete</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:48</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:51</td>
+				<td>
+I click language delet icon									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:52</td>
+				<td>
+A popup should be shown with 'Hindi has been deleted from your languages'									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:31:52</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Profile Languages delete_15-31-2021_3152.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Profile Languages delete_15-31-2021_3152.jpeg</span>
+												<span class="file-size"> 70668Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">SellerProfile_Skills</p> 
+													<p class="duration text-sm">0h:0m:36s+232ms</p> 
+													<span class="datetime">19:31:52 PM</span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">SellerProfile_Skills</h5>
+															<span class='badge badge-success'>11/15/2021 7:31:52 PM</span>
+															<span class='badge badge-danger'>11/15/2021 7:32:29 PM</span>
+															<span class='badge badge-default'>0h:0m:36s+232ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="mt-4">
+	
+	<div class="accordion">
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Add Profile skills with data</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:56</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:58</td>
+				<td>
+I click on skills tab									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:58</td>
+				<td>
+I click on Add New button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:59</td>
+				<td>
+I enter the data in 'Testing' and 'Expert'  and click on Add button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:59</td>
+				<td>
+A popup 'Testing has been added to your skills' should be shown									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:32:00</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Add Profile skills with data_15-32-2021_3200.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Add Profile skills with data_15-32-2021_3200.jpeg</span>
+												<span class="file-size"> 67893Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Add Profile skills with data</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:04</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:06</td>
+				<td>
+I click on skills tab									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:06</td>
+				<td>
+I click on Add New button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:07</td>
+				<td>
+I enter the data in 'Editing' and 'Beginner'  and click on Add button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:07</td>
+				<td>
+A popup 'Editing has been added to your skills' should be shown									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:32:08</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Add Profile skills with data_15-32-2021_3208.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Add Profile skills with data_15-32-2021_3208.jpeg</span>
+												<span class="file-size"> 69547Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Edit Profile Skills with data</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:12</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:19</td>
+				<td>
+I click on Skill Edit pen icon									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:20</td>
+				<td>
+I Edit the data in 'English' and 'Expert'  and click on update button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:21</td>
+				<td>
+A popup 'English has been updated to your skills' should be shown									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:32:22</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Edit Profile Skills with data_15-32-2021_3222.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Edit Profile Skills with data_15-32-2021_3222.jpeg</span>
+												<span class="file-size"> 73124Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Profile Skills delete</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:26</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:28</td>
+				<td>
+I click on skills tab									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:28</td>
+				<td>
+I click on delete icon									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:28</td>
+				<td>
+A popup 'English has been deleted' should be shown									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:32:29</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Profile Skills delete_15-32-2021_3229.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Profile Skills delete_15-32-2021_3229.jpeg</span>
+												<span class="file-size"> 66327Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">SellerProfile</p> 
+													<p class="duration text-sm">0h:0m:7s+302ms</p> 
+													<span class="datetime">19:32:29 PM</span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">SellerProfile</h5>
+															<span class='badge badge-success'>11/15/2021 7:32:29 PM</span>
+															<span class='badge badge-danger'>11/15/2021 7:32:37 PM</span>
+															<span class='badge badge-default'>0h:0m:7s+302ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="mt-4">
+	
+	<div class="accordion">
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">Edit Profile Name with data</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:33</td>
+				<td>
+I logged into Trade Skills portal successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:35</td>
+				<td>
+I click on name expand icon									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:36</td>
+				<td>
+I enter 'nandini' 'kusumpudi' and click on Save button									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:36</td>
+				<td>
+Name should be saved successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>19:32:37</td>
+				<td>
+Snapshot below: AventStack.ExtentReports.ExtentTest									</td>
+			</tr>
+	</tbody>
+</table>
+												<div class="detail-foot">
+							<ul class="attachments">
+								<li>
+									<a href="C:\Users\nandini\Desktop\git\MarsTestAutomation\MarsTestAutomation\Result\Result_15112021 192934\Edit Profile Name with data_15-32-2021_3237.jpeg" data-featherlight="image">
+										<div class="file-icon">
+											<i class="fa fa-file-image-o"></i> 
+										</div>
+										<div class="file-info">
+												<span class="file-name">Edit Profile Name with data_15-32-2021_3237.jpeg</span>
+												<span class="file-size"> 52081Kb</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+											</div>
+										</li>
+                                </ul>    
+                            </div>
+                        </div>
+                        <div class="test-content scrollable">
+                            <div class="test-content-tools">
+                                <ul>
+                                    <li>
+                                        <a class="back-to-test" href="javascript:void(0)">
+                                            <i class="fa fa-arrow-left"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-content-detail">
+                                <div class="detail-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script type='text/javascript'>
+	
+</script>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/f97b667/spark/js/script.js"></script>
+
+</body>
+
+</html>
